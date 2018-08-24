@@ -9,8 +9,8 @@ A [Flutter](https://flutter.io/) app demonstrating multiple environment configur
 - running **lib/main.dart** uses the *Development* environment by default
 - run **lib/config/{environment}.dart** to build for the desired environment
 - the app's constructor receives an **Env** instance
-- **Env.value.{attribute}** can also be called statically from any location within the application 
-- **Env.value.name** returns the environment's name; ie "Staging" 
+- `Env.value.{attribute}` can also be called statically from any location within the application 
+- `Env.value.name` returns the environment's name; ie "Staging" 
 - tests have their own environment which is passed to the app's constructor from within the test
 
 
