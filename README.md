@@ -17,7 +17,9 @@ A [Flutter](https://flutter.io/) app demonstrating multiple environment configur
 
 ## Getting Started
 
-Clone the project and experiment with the following commands...
+- clone the project
+- run `$ flutter packages get` 
+- experiment with the following commands...
 
 ###### Defaults to **Development** environment 
  
