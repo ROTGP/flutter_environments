@@ -15,6 +15,11 @@ void main() {
     // Build our app and trigger a frame.
     await tester.pumpWidget(new MyApp(Testing()));
 
+    // Verify that our env variables are valid.
+    expect(find.text('Environment: Testing'), findsOneWidget);
+    expect(find.text('Base URL: https://api.testing.website.org'), findsOneWidget);
+    expect(find.text('Base URL: https://api.website.org'), findsNothing);
+
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
     expect(find.text('1'), findsNothing);
