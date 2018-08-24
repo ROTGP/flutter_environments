@@ -1,6 +1,6 @@
 # flutter_environments
 
-A [Flutter](https://flutter.io/) app demonstrating multiple environment configurations. It's the stock flutter counter app with a few environment-specific variables (colours, etc). There's also a test to validate that environments are working properly.
+A [Flutter](https://flutter.io/) app demonstrating multiple environment configurations. It's the stock flutter counter app with a few environment-specific variables (colours, strings, etc). There's also a test to validate that environments are working correctly.
 
 
 ## How it works
@@ -10,7 +10,7 @@ A [Flutter](https://flutter.io/) app demonstrating multiple environment configur
 - run **lib/config/{environment}.dart** to build for the desired environment
 - the app's constructor receives an **Env** instance
 - **Env.value.{attribute}** can also be called statically from any location within the application 
-- *Env.value.name* returns the environment's name; ie "Staging" 
+- **Env.value.name** returns the environment's name; ie "Staging" 
 - tests have their own environment which is passed to the app's constructor from within the test
 
 
