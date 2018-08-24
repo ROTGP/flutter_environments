@@ -1,16 +1,40 @@
 # flutter_environments
 
-A Flutter project demonstrating multiple environment configurations.
+A [Flutter](https://flutter.io/) app demonstrating multiple environment configurations.
+
+
+## How it works
+
+- environment configuration files are found in **lib/config**
+- running **lib/main.dart** uses the *Development* environment by default
+- run **lib/config/{environment}.dart** to build for the desired environment
+- the app's constructor receives an **Env** instance
+- **Env.value.{attribute}** can also be called statically from any location within the application 
+
+
 
 ## Getting Started
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+- clone the project and experiment with the following commands
 
-Run 
+Defaults to **Development** environment 
+```sh
+$ flutter run lib/main.dart
+```
 
-flutter run lib/main.dart
-flutter run lib/config/development.dart
-flutter run lib/config/staging.dart
-flutter run lib/config/production.dart
-flutter test test/widget_test.dart
+![development](https://raw.githubusercontent.com/ROTGP/flutter_environments/master/screenshots/development.png)
+
+
+Run **Staging** environment
+```sh
+$ flutter run lib/config/staging.dart
+```
+
+![development](https://raw.githubusercontent.com/ROTGP/flutter_environments/master/screenshots/staging.png)
+
+Build for **Production** environment
+```sh
+$ flutter build apk lib/config/production.dart
+```
+
+![development](https://raw.githubusercontent.com/ROTGP/flutter_environments/master/screenshots/production.png)
