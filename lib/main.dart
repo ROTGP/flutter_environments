@@ -5,8 +5,7 @@ import 'config/development.dart';
 void main() => Development();
 
 class MyApp extends StatelessWidget {
-  final Env env;
-  MyApp(this.env);
+  MyApp();
 
   // This widget is the root of your application.
   @override
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
         // "hot reload" (press "r" in the console where you ran "flutter run",
         // or press Run > Flutter Hot Reload in IntelliJ). Notice that the
         // counter didn't reset back to zero; the application is not restarted.
-        primarySwatch: env.primarySwatch,
+        primarySwatch: Env.of(context)?.primarySwatch,
       ),
       home: new MyHomePage(title: "Environment Demo"),
     );
@@ -51,6 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
+    print(Env.of(context));
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
@@ -95,10 +95,10 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             new Text(
-              'Environment: ${Env.value.name}',
+              'Environment: ${Env.of(context)?.name}',
             ),
             new Text(
-              'Base URL: ${Env.value.baseUrl}',
+              'Base URL: ${Env.of(context)?.baseUrl}',
             ),
             new Text(
               'You have pushed the button this many times:',

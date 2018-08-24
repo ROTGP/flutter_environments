@@ -13,7 +13,7 @@ import 'package:flutter_environments/config/testing.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(new MyApp(Testing()));
+    await tester.pumpWidget(Testing());
 
     // Verify that our env variables are valid.
     expect(find.text('Environment: Testing'), findsOneWidget);
