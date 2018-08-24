@@ -1,5 +1,5 @@
 name: flutter_environments
-description: A Flutter project demonstrating multiple environment configurations.
+description: A Flutter app demonstrating multiple environment configurations.
 
 dependencies:
   flutter:
